@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#MISE description="Build keyboard firmware"
+
+docker compose run qmk -kb mtk/mtk64erp -km via

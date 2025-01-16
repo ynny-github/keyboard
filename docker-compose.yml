@@ -1,0 +1,17 @@
+version: '3'
+services:
+  remap:
+    build:
+      context: docker/remap
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/usr/src/app
+    ports:
+      - "3000:3000"
+  qmk:
+    build:
+      context: docker/qmk_firmware
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/usr/src/app
+    command: "-kb mtk/mtk64erp -km via"

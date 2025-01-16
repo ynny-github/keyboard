@@ -1,0 +1,6 @@
+[submodule "remap"]
+	path = remap
+	url = https://github.com/remap-keys/remap.git
+[submodule "qmk_firmware"]
+	path = qmk_firmware
+	url = git@github.com:ynny-github/qmk_firmware.git
