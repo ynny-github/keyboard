@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#MISE description="Initialize development environment"
+
+if [ ! -d "${MISE_PROJECT_ROOT}/firmware" ]; then
+  ln -s ${MISE_PROJECT_ROOT}/qmk_firmware/keyborads/mtk ${MISE_PROJECT_ROOT}/firmware
+fi
