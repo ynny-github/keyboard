@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
 #MISE description="Build keyboard firmware"
 
+if [ -f qmk_firmware/mtk_mtk64erp_via.uf2 ]; then
+  rm qmk_firmware/mtk_mtk64erp_via.uf2
+fi
+
 docker compose run qmk -kb mtk/mtk64erp -km via
